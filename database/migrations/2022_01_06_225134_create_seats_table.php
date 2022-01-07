@@ -14,7 +14,9 @@ class CreateSeatsTable extends Migration
     public function up()
     {
         Schema::create('seats', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
+            $table->foreignId('station_id')->references('id')->on('stations');
+            $table->foreignId('trips_id')->references('id')->on('trips');
             $table->timestamps();
         });
     }
