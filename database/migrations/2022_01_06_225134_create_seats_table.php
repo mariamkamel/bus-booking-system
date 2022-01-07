@@ -15,8 +15,7 @@ class CreateSeatsTable extends Migration
     {
         Schema::create('seats', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('station_id')->references('id')->on('stations');
-            $table->foreignId('trips_id')->references('id')->on('trips');
+            $table->foreignId('bus_id')->references('id')->on('buses');
             $table->timestamps();
         });
     }

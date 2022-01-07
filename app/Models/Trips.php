@@ -8,13 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Trips extends Model
 {
     use HasFactory;
-    public function Seats()
+    public function Buses()
     {
-        return $this->hasMany('App\Models\Seats'); 
-    }
-
-    public function Stations()
-    {
-        return $this->hasMany('App\Models\Stations'); 
+        return $this->belongsTo('App\Models\Buses');
     }
 }

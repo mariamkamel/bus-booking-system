@@ -15,6 +15,7 @@ class CreateTripsTable extends Migration
     {
         Schema::create('trips', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('bus_id')->references('id')->on('buses');
             $table->timestamps();
         });
     }

@@ -6,13 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Seats extends Model
 {
-    public function Stations()
-    {
-        return $this->belongsTo('App\Models\Stations');
-    }
 
-    public function Trips()
+    public function Buses()
     {
-        return $this->belongsTo('App\Models\Trips');
+        return $this->belongsTo('App\Models\Buses');
     }
 }

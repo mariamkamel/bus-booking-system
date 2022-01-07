@@ -5,13 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Stations extends Model
+class Routes extends Model
 {
     use HasFactory;
-    public function Routes()
+    public function Stations()
     {
-        return $this->hasMany('App\Models/Routes'); 
+        return $this->belongsTo('App\Models\Stations');
     }
-
 }
-
